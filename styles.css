@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+     box-sizing: border-box; /* if we add padding or border, doesnt affect width */
+}
+
+body {
+    font-family: 'Muli', 'sans-serif';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* entire heigh of the browser */
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5 
+}
+
+.panel.active h3 {
+    opacity: 1;
+    background-color: black;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), 
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+#firstPic {
+    background-image: url('https://smashcutreviews.com/wp-content/uploads/2015/05/blurryface-album-review-1280x720.jpg');
+}
+
+#secondPic {
+    background-image: url('https://www.strifemag.com/wp-content/uploads/2023/01/Twenty-One-Pilots-Vessel.png');
+}
+
+#thirdPic {
+    background-image: url('https://www.rockandpop.cl/wp-content/uploads/2023/03/Twenty-One-Pilots-stressed-out-promo.jpg');
+}
+
+#fourthPic {
+    background-image: url('https://www.billboard.com/wp-content/uploads/media/Twenty-One-Pilots-press-photo-2018-cr-Brad-Heaton-billboard-1548.jpg');
+}
+
+#fifthPic {
+    background-image: url('https://mapsound.ar/wp-content/uploads/2021/06/twentyonepilo-1-2.jpg');
+}
+
+
+
+
